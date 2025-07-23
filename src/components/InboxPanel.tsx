@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
@@ -10,7 +10,7 @@ import { Plus, MessageCircle, Users, Server, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AddAccountModal } from '@/components/AddAccountModal';
 import { createClient } from '@/lib/supabase';
-import type { Account, Message } from '@/lib/supabase';
+import type { Account } from '@/lib/supabase';
 
 interface InboxPanelProps {
   onAccountSelect: (account: Account) => void;

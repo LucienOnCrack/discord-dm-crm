@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { InboxPanel } from '@/components/InboxPanel';
 import { ChatView } from '@/components/ChatView';
 import { GuildDashboard } from '@/components/GuildDashboard';
-import { createClient } from '@/lib/supabase';
 import type { Account } from '@/lib/supabase';
 
 export default function Home() {

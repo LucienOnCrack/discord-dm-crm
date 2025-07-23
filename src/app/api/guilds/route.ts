@@ -126,7 +126,14 @@ export async function GET(request: NextRequest) {
             discriminator: cached.owner_discriminator || '0',
             avatar: cached.owner_avatar,
           } : null,
-          highest_role_members: (cached.guild_members_cache || []).map((member: any) => ({
+          highest_role_members: (cached.guild_members_cache || []).map((member: {
+            member_id: string;
+            member_username: string;
+            member_global_name: string | null;
+            member_discriminator: string;
+            member_avatar: string | null;
+            member_nick: string | null;
+          }) => ({
             id: member.member_id,
             username: member.member_username,
             global_name: member.member_global_name,
